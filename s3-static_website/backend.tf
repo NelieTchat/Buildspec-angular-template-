@@ -4,7 +4,7 @@ terraform {
     bucket         = "my-cloud9net-static-website"
     key            = "terraform.tfstate"
     region         = "us-east-1"            # Replace with your AWS region
-    dynamodb_table = "terraform-lock-table" # Optional: Specify an existing DynamoDB table for state locking
+    # dynamodb_table = "terraform-lock-table" # Optional: Specify an existing DynamoDB table for state locking
     encrypt        = true
   }
 }
