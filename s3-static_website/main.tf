@@ -151,6 +151,13 @@ resource "aws_cloudfront_distribution" "my_distribution" {
     }
   }
 
+    # Configure access logs
+  logging_config {
+    bucket = "my-cicd-static-cloud9net-project.s3.amazonaws.com"
+    include_cookies = false
+    prefix = "cloudfront/"
+  }
+
   viewer_certificate {
     cloudfront_default_certificate = var.cloudfront_viewer_certificate.cloudfront_default_certificate
   }
